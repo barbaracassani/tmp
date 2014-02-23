@@ -1,0 +1,13 @@
+<div ng-include="'partials/navbar'"></div>
+
+
+<ul class="row marketing">
+  <li ng-repeat="prog in programmes">
+      <pre ng-show="prog.overlapsWithPrevious">Overlaps with previous</pre>
+      <h4>{{prog.title}}</h4>
+      <p>Starts : {{prog.startTime | _myDate}}</p>
+      <p>Ends : {{prog.endTime | _myDate}}</p>
+      <p>{{prog.duration | _myDuration}}</p>
+  </li>
+</ul>
+
